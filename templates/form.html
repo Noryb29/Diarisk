@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="/static/css/formStyles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- Google Fonts: Playfair Display -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.png"> <!-- Add closing angle bracket -->
+</head>
+<body>
+<header>
+    <img src="/static/img/logo2.png" id="logo" alt="Logo">
+    <span id="topText">DIARISK</span>
+</header>
+
+<main>
+    <h1>Diabetes Prediction</h1>
+    <p class="desc">Enter your details and Discover if you're at risk of developing diabetes in the future — because prevention starts with awareness.</p>
+    <form action="/predict" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="firstname">First Name:</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lastname">Last Name:</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select class="form-control" id="gender" name="gender" required>
+                <option value="" disabled selected>Select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" name="age" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label>Medical History:</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="hypertension" name="hypertension">
+                <label class="form-check-label" for="hypertension">Hypertension</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="heart_disease" name="heart_disease">
+                <label class="form-check-label" for="heart_disease">Heart Disease</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="smoking_history">Smoking History:</label>
+            <select class="form-control" id="smoking_history" name="smoking_history" required>
+                <option value="" disabled selected>Select smoking history</option>
+                <option value="never">Never</option>
+                <option value="No info">No info</option>
+                <option value="current">Current</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="bmi">BMI:</label>
+            <input placeholder="The average BMI for an adult is 18.5 and 25" type="number" class="form-control" id="bmi" name="bmi" step="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="HbA1c_level">Hemoglobin A1C Level:</label>
+            <input placeholder="Global Average is 5.7%" type="number" class="form-control" id="HbA1c_level" name="HbA1c_level" step="0.1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="blood_glucose_level">Blood Glucose Level:</label>
+            <input placeholder="Average is 70 to 99 mg/dL" type="number" class="form-control" id="blood_glucose_level" name="blood_glucose_level" required>
+        </div>
+
+        <div class="form-group text-center">
+            <a href="/" class="btn btn-secondary py-2 mr-5">Back to Homepage</a>
+            <input type="submit" class="btn btn-success px-5" value="Predict">
+
+        </div>
+        
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2023 Diabetes Prediction</p>
+</footer>
+</body>
+</html>

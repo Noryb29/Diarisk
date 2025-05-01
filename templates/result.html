@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/css/formStyles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.png">
+    <link rel="stylesheet" href="/static/css/formStyles.css">
+</head>
+<body>
+
+<header>
+    <img src="/static/img/logo2.png" id="logo" alt="Logo">
+    <span id="topText">DIARISK</span>
+</header>
+
+<main>
+    <div class="result-box text-center">
+        <h1>Hi {{ firstname }} {{ lastname }}</h1>
+        <p class="result-text">{{ prediction }} </p>
+
+        <div class="btn-group">
+            <a href="/form" class="btn btn-primary mr-3 px-4">Try Again</a>
+            <a href="/" class="btn btn-secondary px-4">Back to Home</a>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center mt-5">
+    <p>&copy; 2023 Diabetes Prediction</p>
+</footer>
+
+</body>
+</html>

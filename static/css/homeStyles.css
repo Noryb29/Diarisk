@@ -1,0 +1,39 @@
+body {
+    background: #f4f4f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.landing-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-top: 60px;
+    color: white;
+    font-weight: 100;
+}
+.landing-subtext {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #000000;
+    padding-inline: 250px;
+}
+.btn-cta {
+    font-size: 1.2rem;
+    padding: 12px 36px;
+}
+footer {
+    margin-top: auto;
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+}
+#logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
